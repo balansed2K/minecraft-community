@@ -48,12 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     registerFields.hidden = !register;
     loginFields.hidden = register;
 
-    // Важно: у скрытого блока нужно снимать required,
-    // иначе браузер блокирует отправку формы, пытаясь
-    // провалидировать невидимые обязательные поля.
     registerFields.querySelectorAll('input, select').forEach(el => {
       el.required = register;
     });
+
     loginFields.querySelectorAll('input, select').forEach(el => {
       el.required = !register;
     });
@@ -151,9 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const password2 =
           document.getElementById('regPassword2').value;
 
-        const server =
-          document.getElementById('regServer').value;
-
         if (!username || username.length < 3) {
           msg('Никнейм должен быть минимум 3 символа.', true);
           return;
@@ -169,11 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        if (!/^[1-6]$/.test(server)) {
-          msg('Выбери сервер выживания от 1 до 6.', true);
-          return;
-        }
-
         const { error } =
           await supabaseClient.auth.signUp({
             email,
@@ -181,8 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             options: {
               emailRedirectTo: window.location.href,
               data: {
-                username,
-                survival_server: Number(server)
+                username
               }
             }
           });

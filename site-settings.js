@@ -1,11 +1,14 @@
 /* =====================================================
-   НАСТРОЙКИ САЙТА — МЕНЯЙ ТОЛЬКО ТЕКСТ МЕЖДУ КАВЫЧКАМИ
+   НАСТРОЙКИ САЙТА
    Картинки домов лежат в assets/houses/
    ===================================================== */
+
 const SITE_SETTINGS = {
   heroTitle: 'СТРОЙ СВОЁ\nБУДУЩЕЕ',
   heroSubtitle: 'Твой Minecraft-мир. Твои идеи. Твои постройки.',
-  discordUrl: 'https://t.me/minecraft_community_bild',,
+
+  telegramUrl: 'https://t.me/minecraft_community_bild',
+
   houses: [
     { name: 'Дом №1', floors: '1 этажный', price: 'Договорная', image: 'assets/houses/house-1.png' },
     { name: 'Дом №2', floors: '1 этажный', price: 'Договорная', image: 'assets/houses/house-2.png' },

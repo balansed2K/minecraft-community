@@ -48,6 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
     registerFields.hidden = !register;
     loginFields.hidden = register;
 
+    // Важно: у скрытого блока нужно снимать required,
+    // иначе браузер блокирует отправку формы, пытаясь
+    // провалидировать невидимые обязательные поля.
+    registerFields.querySelectorAll('input, select').forEach(el => {
+      el.required = register;
+    });
+    loginFields.querySelectorAll('input, select').forEach(el => {
+      el.required = !register;
+    });
+
     authSubmit.textContent = register
       ? 'Создать аккаунт'
       : 'Войти';

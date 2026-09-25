@@ -1,409 +1,578 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Minecraft Community</title>
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MINECRAFT COMMUNITY</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container headerInner">
+<header>
+  <a class="brand" href="#home">
+    <span class="cube">◆</span>
+    <span>
+      <b>MINECRAFT</b>
+      <small>COMMUNITY</small>
+    </span>
+  </a>
 
-      <a href="#home" class="logo">
-        <span class="logoMark">MC</span>
-        <span>Minecraft Community</span>
+  <button class="mob">☰</button>
+
+  <nav id="nav">
+    <a class="active" href="#home">⌂ Главная</a>
+    <a href="#reviews">◌ Отзывы</a>
+    <a href="#shop">▣ Магазин</a>
+    <a href="#rules">▤ Правила</a>
+    <a href="#news">◈ Новости</a>
+    <a href="#team">♟ Команда проекта</a>
+    <a href="#telegram">✈ Telegram</a>
+  </nav>
+
+  <button id="accountButton" class="accountBtn">Регистрация / Вход</button>
+  <button id="logoutButton" class="accountBtn" hidden>Выйти</button>
+  <button id="theme">☾</button>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="shade"></div>
+
+  <div class="heroText">
+    <span class="kicker">MINECRAFT COMMUNITY</span>
+
+    <h1>СТРОЙ СВОЁ<br><em>БУДУЩЕЕ</em></h1>
+
+    <p>Твой Minecraft-мир. Твои идеи. Твои постройки.</p>
+
+    <div>
+      <a class="btn gold" href="#shop">Перейти в магазин →</a>
+      <a class="btn" href="#rules">Правила проекта</a>
+    </div>
+  </div>
+
+  <div class="online">● СЕРВЕР ОНЛАЙН</div>
+</section>
+
+
+<section class="quick">
+
+  <a href="#reviews">
+    <b>◌</b>
+    <strong>Отзывы</strong>
+    <small>Мнение игроков</small>
+  </a>
+
+  <a href="#shop">
+    <b>▣</b>
+    <strong>Магазин домов</strong>
+    <small>Готовые постройки</small>
+  </a>
+
+  <a href="#rules">
+    <b>▤</b>
+    <strong>Правила</strong>
+    <small>Важная информация</small>
+  </a>
+
+  <a href="#news">
+    <b>◈</b>
+    <strong>Новости</strong>
+    <small>Обновления проекта</small>
+  </a>
+
+  <a href="#team">
+    <b>♟</b>
+    <strong>Команда</strong>
+    <small>Создатели проекта</small>
+  </a>
+
+</section>
+
+
+<section class="section" id="reviews">
+
+  <div class="head">
+    <div>
+      <span class="kicker">ОТ ИГРОКОВ</span>
+      <h2>Отзывы</h2>
+    </div>
+
+    <button class="btn gold" id="reviewOpen">
+      Оставить отзыв +
+    </button>
+  </div>
+
+  <div class="reviews" id="reviewsGrid">
+    <p class="muted reviewsEmpty">Загрузка отзывов…</p>
+  </div>
+
+</section>
+
+
+<section class="section" id="shop">
+
+  <div class="head">
+    <div>
+      <span class="kicker">КАТАЛОГ</span>
+      <h2>Магазин домов</h2>
+    </div>
+
+    <span class="muted">8 домов · цена договорная</span>
+  </div>
+
+  <div class="shop">
+
+    <div class="houses" id="houses"></div>
+
+    <aside>
+      <div class="panelIcon">⌂</div>
+
+      <h3>Почему наши дома?</h3>
+
+      <ul>
+        <li>Современный дизайн</li>
+        <li>Уникальные постройки</li>
+        <li>Качественные материалы</li>
+        <li>Подходят для выживания и PvP</li>
+      </ul>
+
+      <a
+        class="btn gold wide"
+        href="https://t.me/minecraft_community_bild"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Заказать дом →
       </a>
 
-      <nav id="nav">
-        <a href="#home">Главная</a>
-        <a href="#reviews">Отзывы</a>
-        <a href="#shop">Магазин</a>
-        <a href="#rules">Правила</a>
-        <a href="#news">Новости</a>
-        <a href="#team">Команда проекта</a>
-        <a href="https://t.me/minecraft_community_bild" target="_blank" rel="noopener noreferrer">Telegram</a>
-      </nav>
+    </aside>
 
-      <div class="headerActions">
-        <button id="theme" class="iconBtn">☾</button>
-        <button class="mob">☰</button>
-      </div>
+  </div>
 
+</section>
+
+
+<section class="section split" id="rules">
+
+  <div>
+    <span class="kicker">ВАЖНО</span>
+    <h2>Правила проекта</h2>
+
+    <p class="muted">
+      Полный текст правил можно заменить прямо в index.html.
+    </p>
+  </div>
+
+  <div class="rules">
+
+    <div>
+      <b>01</b>
+      Уважай других игроков и команду проекта.
     </div>
-  </header>
 
-
-  <!-- HERO -->
-  <main>
-
-    <section class="hero" id="home">
-      <div class="container heroInner">
-
-        <div class="heroText">
-          <span class="kicker">MINECRAFT COMMUNITY</span>
-
-          <h1>СТРОЙ СВОЁ<br>БУДУЩЕЕ</h1>
-
-          <p>
-            Твой Minecraft-мир. Твои идеи. Твои постройки.
-          </p>
-
-          <div class="heroButtons">
-            <a href="#shop" class="btn gold">Смотреть магазин →</a>
-            <a href="#news" class="btn">Новости</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- QUICK LINKS -->
-    <section class="quick">
-      <div class="container quickGrid">
-
-        <a href="#shop">
-          <span>01</span>
-          <b>Магазин</b>
-          <small>Наши проекты</small>
-        </a>
-
-        <a href="#reviews">
-          <span>02</span>
-          <b>Отзывы</b>
-          <small>Мнения игроков</small>
-        </a>
-
-        <a href="#rules">
-          <span>03</span>
-          <b>Правила</b>
-          <small>Важная информация</small>
-        </a>
-
-        <a href="#team">
-          <span>04</span>
-          <b>Команда</b>
-          <small>Создатели проекта</small>
-        </a>
-
-      </div>
-    </section>
-
-
-    <!-- REVIEWS -->
-    <section class="section" id="reviews">
-
-      <div class="head">
-        <div>
-          <span class="kicker">COMMUNITY</span>
-          <h2>Отзывы</h2>
-        </div>
-
-        <button id="reviewOpen" class="btn gold">
-          Оставить отзыв →
-        </button>
-      </div>
-
-      <div id="reviewsGrid" class="reviewsGrid"></div>
-
-    </section>
-
-
-    <!-- SHOP -->
-    <section class="section" id="shop">
-
-      <div class="head">
-        <div>
-          <span class="kicker">КАТАЛОГ</span>
-          <h2>Магазин</h2>
-        </div>
-      </div>
-
-      <div id="houses" class="housesGrid"></div>
-
-    </section>
-
-
-    <!-- RULES -->
-    <section class="section" id="rules">
-
-      <div class="head">
-        <div>
-          <span class="kicker">ИНФОРМАЦИЯ</span>
-          <h2>Правила</h2>
-        </div>
-      </div>
-
-      <div class="rulesGrid">
-
-        <article>
-          <span>01</span>
-          <h3>Уважение</h3>
-          <p>
-            Уважайте других игроков и участников проекта.
-          </p>
-        </article>
-
-        <article>
-          <span>02</span>
-          <h3>Честная игра</h3>
-          <p>
-            Использование запрещённых модификаций и читов не допускается.
-          </p>
-        </article>
-
-        <article>
-          <span>03</span>
-          <h3>Порядок</h3>
-          <p>
-            Соблюдайте правила сервера и следуйте указаниям администрации.
-          </p>
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- NEWS -->
-    <section class="section" id="news">
-
-      <div class="head">
-        <div>
-          <span class="kicker">СВЕЖЕЕ</span>
-          <h2>Новости</h2>
-        </div>
-      </div>
-
-      <div class="cards">
-
-        <article>
-          <span>ОБНОВЛЕНИЕ</span>
-          <h3>Новый раздел магазина</h3>
-          <p>
-            Добавлены карточки домов и удобный просмотр каталога.
-          </p>
-          <small>Сегодня</small>
-        </article>
-
-        <article>
-          <span>ПРОЕКТ</span>
-          <h3>Сайт проекта обновлён</h3>
-          <p>
-            Новый интерфейс, навигация и адаптация под телефон.
-          </p>
-          <small>Сегодня</small>
-        </article>
-
-        <article>
-          <span>НОВЫЕ ПРОЕКТЫ</span>
-          <h3>Мы добавили 8 новых проектов!</h3>
-          <p>
-            В наш магазин добавлены 8 новых проектов домов.
-            Выбирай понравившийся проект и оформляй заказ через наш Telegram-канал.
-          </p>
-          <small>Сегодня</small>
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- TEAM -->
-    <section class="section" id="team">
-
-      <div class="head">
-        <div>
-          <span class="kicker">PEOPLE</span>
-          <h2>Команда проекта</h2>
-        </div>
-      </div>
-
-      <div class="teamGrid">
-
-        <article class="teamCard">
-          <div class="avatar">A</div>
-          <h3>Администрация</h3>
-          <p>Создание и развитие проекта</p>
-        </article>
-
-        <article class="teamCard">
-          <div class="avatar">B</div>
-          <h3>Строители</h3>
-          <p>Создание Minecraft-проектов</p>
-        </article>
-
-        <article class="teamCard">
-          <div class="avatar">C</div>
-          <h3>Модерация</h3>
-          <p>Помощь игрокам и порядок</p>
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- TELEGRAM -->
-    <section class="telegramSection">
-
-      <div class="container telegramInner">
-
-        <div>
-          <span class="kicker">СВЯЗЬ</span>
-          <h2>Наш Telegram</h2>
-
-          <p>
-            Следи за новостями проекта и связывайся с нами.
-          </p>
-        </div>
-
-        <a
-          href="https://t.me/minecraft_community_bild"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn gold"
-        >
-          ✈ Перейти в Telegram →
-        </a>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footerInner">
-      <span>© Minecraft Community</span>
-      <span>Создано для Minecraft Community</span>
+    <div>
+      <b>02</b>
+      Не используй читы, баги и стороннее ПО для преимущества.
     </div>
-  </footer>
+
+    <div>
+      <b>03</b>
+      Не мешай игровому процессу других участников.
+    </div>
+
+    <div>
+      <b>04</b>
+      Следуй решениям администрации в спорных ситуациях.
+    </div>
+
+  </div>
+
+</section>
 
 
-  <!-- REVIEW DIALOG -->
-  <dialog id="reviewDialog">
+<section class="section" id="news">
 
-    <form id="reviewForm">
+  <div class="head">
+    <div>
+      <span class="kicker">СВЕЖЕЕ</span>
+      <h2>Новости</h2>
+    </div>
+  </div>
 
-      <button
-        type="button"
-        class="dialogClose"
-        onclick="reviewDialog.close()"
+  <div class="cards">
+
+    <article>
+      <span>ОБНОВЛЕНИЕ</span>
+      <h3>Новый раздел магазина</h3>
+      <p>
+        Добавлены карточки домов и удобный просмотр каталога.
+      </p>
+      <small>Сегодня</small>
+    </article>
+
+    <article>
+      <span>ПРОЕКТ</span>
+      <h3>Сайт проекта обновлён</h3>
+      <p>
+        Новый интерфейс, навигация и адаптация под телефон.
+      </p>
+      <small>Сегодня</small>
+    </article>
+
+    <article>
+      <span>СКОРО</span>
+      <h3>Новые постройки</h3>
+      <p>
+        В каталог можно добавлять новые дома и проекты игроков.
+      </p>
+      <small>Скоро</small>
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="section" id="team">
+
+  <div class="head">
+    <div>
+      <span class="kicker">PROJECT</span>
+      <h2>Команда проекта</h2>
+    </div>
+  </div>
+
+  <div class="team">
+
+    <article>
+      <div class="avatar">A</div>
+      <h3>Администратор</h3>
+      <span class="muted">HazdRy</span>
+      <p>Управление проектом</p>
+    </article>
+
+    <article>
+      <div class="avatar">M</div>
+      <h3>Модератор</h3>
+      <span class="muted">HazdRy</span>
+      <p>Порядок на сервере</p>
+    </article>
+
+    <article>
+      <div class="avatar">D</div>
+      <h3>Дизайнер</h3>
+      <span class="muted">HazdRy</span>
+      <p>Сайт и визуал проекта</p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- TELEGRAM -->
+
+<section class="section" id="telegram">
+
+  <div class="head">
+
+    <div>
+      <span class="kicker">СООБЩЕСТВО</span>
+
+      <h2>Наш Telegram</h2>
+
+      <p class="muted">
+        Новости проекта, обновления и важная информация.
+      </p>
+    </div>
+
+    <a
+      class="btn gold"
+      href="https://t.me/minecraft_community_bild"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ✈ Перейти в Telegram →
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div>
+    <b>MINECRAFT COMMUNITY</b>
+    <small>© 2026</small>
+  </div>
+
+  <div>
+    <a href="#home">Главная</a>
+    <a href="#rules">Правила</a>
+    <a href="#telegram">Telegram</a>
+  </div>
+
+</footer>
+
+
+<!-- ОТЗЫВ -->
+
+<dialog id="reviewDialog">
+
+  <form class="modal" id="reviewForm">
+
+    <button
+      type="button"
+      class="close"
+      onclick="reviewDialog.close()"
+    >
+      ×
+    </button>
+
+    <span class="kicker">ОТЗЫВ</span>
+
+    <h2>Оставить отзыв</h2>
+
+    <p id="reviewMessage" class="authMessage">
+      Отзыв публикуется от имени твоего аккаунта.
+    </p>
+
+    <label>
+      Оценка
+
+      <select id="reviewRating">
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★☆</option>
+        <option value="3">★★★☆☆</option>
+        <option value="2">★★☆☆☆</option>
+        <option value="1">★☆☆☆☆</option>
+      </select>
+
+    </label>
+
+    <label>
+      Отзыв
+
+      <textarea
+        id="reviewText"
+        maxlength="1000"
+        required
+        placeholder="Расскажи о своём опыте на сервере"
+      ></textarea>
+
+    </label>
+
+    <label>
+      Скриншоты
+      <small class="muted">
+        до 3 файлов, каждый до 5 МБ
+      </small>
+
+      <input
+        id="reviewFiles"
+        type="file"
+        accept="image/png,image/jpeg,image/webp"
+        multiple
       >
-        ×
-      </button>
 
-      <span class="kicker">ОТЗЫВ</span>
+    </label>
 
-      <h2>Оставить отзыв</h2>
+    <button type="submit" class="btn gold wide">
+      Опубликовать
+    </button>
 
-      <label>
-        Имя
-        <input id="name" type="text" required>
-      </label>
+  </form>
 
-      <label>
-        Оценка
-        <select id="rating">
-          <option value="5">★★★★★</option>
-          <option value="4">★★★★☆</option>
-          <option value="3">★★★☆☆</option>
-          <option value="2">★★☆☆☆</option>
-          <option value="1">★☆☆☆☆</option>
-        </select>
-      </label>
+</dialog>
 
-      <label>
-        Отзыв
-        <textarea id="text" rows="5" required></textarea>
-      </label>
 
-      <button class="btn gold" type="submit">
-        Опубликовать отзыв
+<!-- АВТОРИЗАЦИЯ -->
+
+<dialog id="authDialog">
+
+  <div class="modal authModal">
+
+    <button
+      type="button"
+      class="close"
+      onclick="authDialog.close()"
+    >
+      ×
+    </button>
+
+    <span class="kicker">АККАУНТ</span>
+
+    <h2 id="authTitle">Регистрация</h2>
+
+    <p id="authMessage" class="authMessage"></p>
+
+    <form id="authForm">
+
+      <div id="registerFields">
+
+        <label>
+          Никнейм
+          <input
+            id="regUsername"
+            maxlength="24"
+            required
+            placeholder="Steve"
+          >
+        </label>
+
+        <label>
+          Email
+          <input
+            id="regEmail"
+            type="email"
+            required
+            placeholder="you@example.com"
+          >
+        </label>
+
+        <label>
+          Пароль
+          <input
+            id="regPassword"
+            type="password"
+            minlength="6"
+            required
+            placeholder="Минимум 6 символов"
+          >
+        </label>
+
+        <label>
+          Повтор пароля
+          <input
+            id="regPassword2"
+            type="password"
+            minlength="6"
+            required
+          >
+        </label>
+
+        <label>
+          Сервер выживания
+
+          <select id="regServer" required>
+
+            <option value="">
+              Выбери сервер
+            </option>
+
+            <option value="1">Выживание №1</option>
+            <option value="2">Выживание №2</option>
+            <option value="3">Выживание №3</option>
+            <option value="4">Выживание №4</option>
+            <option value="5">Выживание №5</option>
+            <option value="6">Выживание №6</option>
+
+          </select>
+
+        </label>
+
+      </div>
+
+
+      <div id="loginFields" hidden>
+
+        <label>
+          Email
+          <input
+            id="loginEmail"
+            type="email"
+            placeholder="you@example.com"
+          >
+        </label>
+
+        <label>
+          Пароль
+          <input
+            id="loginPassword"
+            type="password"
+            placeholder="Пароль"
+          >
+        </label>
+
+      </div>
+
+
+      <button id="authSubmit" class="btn gold wide">
+        Создать аккаунт
       </button>
 
     </form>
 
-  </dialog>
 
-
-  <!-- AUTH DIALOG -->
-  <dialog id="authDialog">
-
-    <div class="dialogContent">
+    <div class="authSwitch">
 
       <button
         type="button"
-        class="dialogClose"
-        onclick="authDialog.close()"
+        class="linkBtn"
+        id="switchToLogin"
       >
-        ×
+        Уже есть аккаунт? Войти
       </button>
-
-      <span class="kicker">ACCOUNT</span>
-
-      <h2>Аккаунт</h2>
-
-      <div id="authContent"></div>
-
-    </div>
-
-  </dialog>
-
-
-  <!-- HOUSE DIALOG -->
-  <dialog id="houseDialog">
-
-    <div class="dialogContent">
 
       <button
         type="button"
-        class="dialogClose"
-        onclick="houseDialog.close()"
+        class="linkBtn"
+        id="switchToRegister"
       >
-        ×
+        Нет аккаунта? Регистрация
       </button>
-
-      <span class="kicker">ПРОЕКТ</span>
-
-      <h2 id="houseTitle">Проект</h2>
-
-      <p id="houseInfo"></p>
-
-      <a
-        href="https://t.me/minecraft_community_bild"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn gold"
-      >
-        ✈ Заказать через Telegram →
-      </a>
 
     </div>
 
-  </dialog>
+  </div>
+
+</dialog>
 
 
-  <!-- SCRIPTS -->
-  <script src="site-settings.js"></script>
-  <script src="script.js"></script>
+<!-- ОКНО ДОМА -->
 
-  <script src="auth-settings.js"></script>
+<dialog id="houseDialog">
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <div class="modal">
 
-  <script src="auth.js"></script>
-  <script src="reviews.js"></script>
+    <button
+      class="close"
+      onclick="houseDialog.close()"
+    >
+      ×
+    </button>
+
+    <span class="kicker">ДОМ</span>
+
+    <h2 id="houseTitle"></h2>
+
+    <p id="houseInfo" class="muted"></p>
+
+    <a
+      class="btn gold wide"
+      href="https://t.me/minecraft_community_bild"
+      target="_blank"
+      rel="noopener noreferrer"
+      onclick="houseDialog.close()"
+    >
+      Заказать этот дом →
+    </a>
+
+  </div>
+
+</dialog>
+
+
+<script src="site-settings.js"></script>
+<script src="script.js"></script>
+<script src="auth-settings.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
+<script src="reviews.js"></script>
 
 </body>
 </html>

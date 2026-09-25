@@ -24,7 +24,11 @@ document.getElementById('theme').onclick = () => { document.body.classList.toggl
 
 document.querySelector('.heroText h1').innerHTML = SITE_SETTINGS.heroTitle.replace('\n', '<br>');
 document.querySelector('.heroText p').textContent = SITE_SETTINGS.heroSubtitle;
-document.querySelector('.discord .btn').href = SITE_SETTINGS.discordUrl;
+document.querySelectorAll('a[href="#telegram"]').forEach(btn => {
+  btn.href = SITE_SETTINGS.telegramUrl;
+  btn.target = '_blank';
+  btn.rel = 'noopener noreferrer';
+});
 
 const reviewDialog = document.getElementById('reviewDialog');
 document.getElementById('reviewOpen').onclick = () => reviewDialog.showModal();
